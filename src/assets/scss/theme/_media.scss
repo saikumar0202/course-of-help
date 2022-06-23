@@ -1,0 +1,29 @@
+@import "variables";
+@mixin media-up($size) {
+  @media (min-width: get-size($size)) {
+    @content;
+  }
+}
+@mixin media-down($size) {
+  @media (max-width: get-size($size)) {
+    @content;
+  }
+}
+@mixin media-between($min, $max) {
+  @media (min-width: get-size($min)) and (max-width: get-size($max)) {
+    @content;
+  }
+}
+@function get-size($size) {
+  @if $size == sm {
+    @return $sm;
+  } @else if $size == md {
+    @return $md;
+  } @else if $size == lg {
+    @return $lg;
+  } @else if $size == xl {
+    @return $xl;
+  } @else {
+    @return $size;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../../assets/scss/theme/color";
+.full-background-image {
+  background-image: url("../../../assets/img/backgroud-1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 500px;
+  // width: 100vw;
+}
+.background-mask {
+  // width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}

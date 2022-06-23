@@ -1,0 +1,70 @@
+@import "./color";
+.button-primary {
+  border: 1px solid $secondary;
+  background-color: $secondary;
+  color: $white;
+  padding: 0.5em 2em;
+  margin: 0 0.5em;
+  transition: 0.3s all;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: "Radikal";
+  // text-transform: uppercase;
+  &.button-sm {
+    font-size: 0.8rem;
+  }
+  &.button-md {
+    font-size: 1rem;
+  }
+  &.button-lg {
+    font-size: 1.2rem;
+  }
+}
+.button-primary:hover {
+  color: $secondary;
+  background-color: transparent;
+}
+.button-primary[disabled="true"],
+.button-primary[disabled] {
+  color: grey;
+  border: 1px solid grey;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.button-primary[disabled="true"]:hover,
+.button-primary[disabled]:hover {
+  background-color: none;
+  color: grey;
+}
+.button-primary.btn-right-arrow::after {
+  content: "\2192";
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease-in;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: top;
+}
+.button-primary.btn-right-arrow:hover::after {
+  transform: translateX(5px);
+}
+.button-primary.btn-left-arrow::before {
+  content: "\2190";
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease-in;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.button-primary.btn-left-arrow:hover::before {
+  transform: translateX(-5px);
+}
+
+*:focus {
+  outline: none !important;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border-color: #ced4da;
+}

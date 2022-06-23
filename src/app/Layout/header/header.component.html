@@ -1,0 +1,58 @@
+<header id="header" class="header">
+  <nav class="nav-desktop container">
+    <a class="logo" href="/">
+      <!-- <img
+        src="assets/media/logo's/technissa-logo-white.svg"
+        class="img-fluid"
+        alt="Technissa logo"
+      /> -->
+      LOGO
+    </a>
+    <ul class="nav-links">
+
+      <li class="nav-link-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a class="link">Home</a>
+      </li>
+      <li class="nav-link-item">
+        <a class="link">Events</a>
+      </li>
+      <li class="nav-link-item" routerLink="about-us" routerLinkActive="active">
+        <a class="link">About Us</a>
+      </li>
+      <li class="nav-link-item">
+        <a class="link">Contact Us</a>
+      </li>
+      <li class="d-flex align-items-center">
+        <a class="button-primary">Donate</a>
+      </li>
+      <span class="underline-header"></span>
+    </ul>
+    <div class="drop-background"></div>
+  </nav>
+
+  <!-- Mobile and Tab Header -->
+  <nav class="nav-mobile container">
+    <a class="logo" href="/">
+      <!-- <img
+          src="assets/media/logo's/technissa-logo-white.svg"
+          class="img-fluid"
+          alt="Technissa logo"
+        /> -->
+      LOGO
+    </a>
+    <div class="header-burger">
+      <div class="burger-item burger-item1"></div>
+      <div class="burger-item burger-item2"></div>
+      <div class="burger-item burger-item3"></div>
+    </div>
+    <div class="mobile-drop">
+      <ul class="mobile-links">
+        <li class="link-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home
+        </li>
+        <li class="link-item">Events</li>
+        <li class="link-item">About Us</li>
+        <li class="link-item">Contact Us</li>
+      </ul>
+    </div>
+  </nav>
+</header>

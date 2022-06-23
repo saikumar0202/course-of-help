@@ -1,0 +1,209 @@
+@import "../../../assets/scss/theme/variables";
+@import "../../../assets/scss/theme/color";
+@import "../../../assets/scss/theme/media";
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $header-h;
+  // background-color: $secondary-bg;
+  // box-shadow: 0 1px 5px 0 #cacaca;
+  z-index: 250;
+  transition: 1s all ease-in-out;
+  backdrop-filter: blur(2px);
+  &.active {
+    background-color: #fff;
+    // opacity: 0.8;
+    // filter: blur(10px);
+    .nav-link-item {
+      .link {
+        color: #000 !important;
+      }
+      &.active {
+        .link {
+          color: $secondary-txt !important;
+        }
+      }
+    }
+    .burger-item {
+      background-color: $secondary-bg !important;
+    }
+  }
+}
+nav.nav-desktop {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  .logo {
+    width: 150px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    .nav-link-item {
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .link {
+        color: white;
+        // margin-top: 1rem;
+        font-family: "Radikal", Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+      }
+      &.active {
+        .link {
+          color: $primary-txt;
+        }
+      }
+    }
+    .underline-header {
+      position: absolute;
+      height: 3px;
+      bottom: 0;
+      background-color: $primary-bg;
+      transition: 0.5s all;
+    }
+  }
+  @include media-down(md) {
+    display: none;
+  }
+}
+.drop-menu {
+  position: fixed;
+  height: 0;
+  top: $header-h;
+  width: 100%;
+  left: 0;
+  right: 0;
+  // padding: 2rem 0;
+  color: white;
+  overflow: hidden;
+  background-color: transparent;
+  // transition: 0.5s all;
+  z-index: 200;
+  .drop-heading {
+    font-size: 3rem;
+    padding: 2rem 1rem;
+  }
+  ul {
+    li {
+      margin-bottom: 1rem;
+      .link {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        transition: 0.3s all;
+      }
+      .link-desc {
+        font-size: 0.8rem;
+      }
+      &:hover {
+        .link {
+          color: $primary-txt !important;
+        }
+      }
+    }
+  }
+  &.active {
+    // background-color: $secondary-bg;
+    height: auto;
+  }
+}
+.drop-background {
+  background-color: $secondary-bg;
+  position: fixed;
+  top: $header-h;
+  height: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s all;
+  z-index: 150;
+  // opacity: 0.7;
+  backdrop-filter: blur(3px);
+}
+
+/*Mobile Styles*/
+nav.nav-mobile {
+  display: flex;
+  height: $header-h;
+  padding: 0 2em;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    width: 150px;
+  }
+  .header-burger {
+    cursor: pointer;
+    width: 26px;
+    height: 22px;
+    position: relative;
+    // background: #11bbbb;
+    display: flex;
+    .burger-item {
+      position: absolute;
+      width: 100%;
+      background: #fff;
+      height: 2px;
+      &1 {
+        top: 0;
+        transition: 0.3s all;
+      }
+      &2 {
+        top: 10px;
+        transition: 0.3s all;
+      }
+      &3 {
+        bottom: 0;
+        transition: 0.3s all;
+      }
+    }
+    &.active {
+      .burger-item {
+        &1 {
+          transform: rotate(45deg);
+          top: 10px;
+        }
+        &2 {
+          opacity: 0;
+        }
+        &3 {
+          transform: rotate(-45deg);
+          top: 10px;
+        }
+      }
+    }
+  }
+  .mobile-drop {
+    position: absolute;
+    z-index: -1;
+    top: $header-h;
+    left: 0;
+    right: 0;
+    transform: translateY(-150%);
+    background-color: $white;
+    transition: 0.5s all;
+    .mobile-links {
+      padding: 2rem 1rem;
+      .link-item {
+        color: $black;
+        padding-top: 8px;
+        &.active {
+          color: $secondary-txt;
+        }
+      }
+    }
+    &.active {
+      transform: translateY(0);
+    }
+  }
+  @include media-up(md) {
+    display: none;
+  }
+}
+
+/*media Queries*/

@@ -1,0 +1,13 @@
+.who-we-are {
+  &__img {
+    background-image: url("../../../assets/img/backgroud-1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &__content {
+    background-color: #333;
+  }
+  &__desc {
+    max-width: 700px;
+  }
+}

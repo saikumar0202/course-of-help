@@ -1,0 +1,30 @@
+/* background colors */
+$primary-bg: #a0d83e;
+$secondary-bg: #965b35;
+
+/*text colors*/
+$primary-txt: #a0d83e;
+$secondary-txt: #965b35;
+
+/*usual colors*/
+$primary: #a0d83e;
+$secondary: #965b35;
+
+/* usual colors */
+$white: white;
+$black: rgb(36, 36, 36);
+$gray: #666;
+.primary-txt {
+  color: $primary-txt;
+}
+.primary-bg {
+  background-color: $primary-bg;
+  color: $white;
+}
+.secondary-txt {
+  color: $secondary-txt;
+}
+.secondary-bg {
+  background-color: $secondary-bg;
+  color: $white;
+}
