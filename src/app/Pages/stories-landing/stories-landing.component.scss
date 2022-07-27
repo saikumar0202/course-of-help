@@ -1,14 +1,17 @@
-@import "../../../assets/scss/theme/color";
+@import "../../../assets/scss/theme/export";
 .story-card {
   border-radius: 10px;
   overflow: hidden;
   background-color: $white;
   box-shadow: 0px 8px 15px 0 #cacaca;
-  margin-bottom: 24px;
   &__img {
     width: 100%;
   }
   &__timestap {
     color: $gray;
+  }
+}
+@include media-up(md) {
+  .our-stories-wrapper {
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-stories-landing',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoriesLandingComponent implements OnInit {
 
+  @Input() heroHeight = 0;
   constructor() { }
 
   ngOnInit(): void {

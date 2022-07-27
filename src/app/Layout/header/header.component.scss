@@ -131,7 +131,7 @@ nav.nav-desktop {
 nav.nav-mobile {
   display: flex;
   height: $header-h;
-  padding: 0 2em;
+  padding: 0 1.5em;
   justify-content: space-between;
   align-items: center;
   .logo {
@@ -188,12 +188,28 @@ nav.nav-mobile {
     background-color: $white;
     transition: 0.5s all;
     .mobile-links {
-      padding: 2rem 1rem;
+      padding: 2rem 1.5rem;
       .link-item {
         color: $black;
-        padding-top: 8px;
+        position: relative;
+        padding-top: 1rem;
+        font-size: 24px;
+        cursor: pointer;
         &.active {
           color: $secondary-txt;
+        }
+        &:hover,
+        &.active {
+          &::after {
+            content: "";
+            background-color: $secondary-bg;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 2px;
+            width: 100%;
+            animation: animateLine 0.5s linear;
+          }
         }
       }
     }
@@ -206,4 +222,12 @@ nav.nav-mobile {
   }
 }
 
+@keyframes animateLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 /*media Queries*/

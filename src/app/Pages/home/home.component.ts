@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  heroWrapperHeight = 0;
   constructor() { }
 
+  getHeroHeight(value: number) {
+    this.heroWrapperHeight = value;
+  }
   ngOnInit(): void {
   }
 
