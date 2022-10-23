@@ -16,16 +16,80 @@ export class GalleryComponent implements OnInit {
   items: GalleryItem[] = [];
   data = [
     {
-      thumb: "assets/img/people.jpg",
-      src: "assets/img/people.jpg",
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
     },
     {
-      thumb: "assets/img/people.jpg",
-      src: "assets/img/people.jpg",
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
     },
     {
-      thumb: "assets/img/people.jpg",
-      src: "assets/img/people.jpg",
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/people.png",
+      src: "assets/img/people.png",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/people.png",
+      src: "assets/img/people.png",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/people.png",
+      src: "assets/img/people.png",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/people.png",
+      src: "assets/img/people.png",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
+    },
+    {
+      thumb: "assets/img/backgroud-1.jpg",
+      src: "assets/img/backgroud-1.jpg",
     },
   ]
   ngOnInit(): void {
@@ -35,7 +99,11 @@ export class GalleryComponent implements OnInit {
     // Add custom gallery config to the lightbox (optional)
     lightboxRef.setConfig({
       imageSize: ImageSize.Cover,
-      thumbPosition: ThumbnailsPosition.Top
+      thumbPosition: ThumbnailsPosition.Bottom,
+      thumbHeight: 90,
+      thumbWidth: 120,
+      thumbView: "default",
+      dots: false,
     });
 
     // Load items into the lightbox gallery ref

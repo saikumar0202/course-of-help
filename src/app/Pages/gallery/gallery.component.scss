@@ -1,0 +1,40 @@
+@import "../../../assets/scss/theme/export";
+.full-background-image {
+  background-image: url("../../../assets/img/backgroud-1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  min-height: 500px;
+  // width: 100vw;
+}
+.background-mask {
+  // width: 100vw;
+  height: 50vh;
+  min-height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.gallery-wrapper {
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      margin: 10px;
+      // width: 200px;
+      height: 200px;
+      object-fit: cover;
+      // box-shadow: 2px 2px 3px 0 #cacaca;
+      @include media-down(md) {
+        height: 100px;
+      }
+    }
+  }
+}

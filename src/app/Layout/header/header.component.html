@@ -43,18 +43,22 @@
         /> -->
       LOGO
     </a>
-    <div class="header-burger">
+    <div class="header-burger" id="header-burger">
       <div class="burger-item burger-item1"></div>
       <div class="burger-item burger-item2"></div>
       <div class="burger-item burger-item3"></div>
     </div>
     <div class="mobile-drop">
       <ul class="mobile-links">
-        <li class="link-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home
+        <li class="link-item" *ngFor="let link of navigationLinks" routerLink="{{link.to}}"
+          routerLinkActive="{{link.activeClass}}" [routerLinkActiveOptions]="{exact:link.exact}"
+          (click)="handleClickItem()">
+          {{link.text}}</li>
+        <!-- <li class="link-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home
         </li>
         <li class="link-item">Events</li>
         <li class="link-item" routerLink="about-us" routerLinkActive="active">About Us</li>
-        <li class="link-item">Contact Us</li>
+        <li class="link-item">Contact Us</li> -->
       </ul>
     </div>
   </nav>

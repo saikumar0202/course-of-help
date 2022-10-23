@@ -35,7 +35,7 @@ import { LightboxModule } from 'ng-gallery/lightbox';
     BrowserAnimationsModule,
     GalleryModule.withConfig({
       // slidingDirection: "horizontal",
-      // imageSize: "cover",
+      imageSize: "cover",
       // thumbMode: "free",
       // thumbPosition: "bottom",
       // counterPosition: "top",

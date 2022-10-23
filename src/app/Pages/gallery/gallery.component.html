@@ -1,1 +1,19 @@
-<gallery [items]="items"></gallery>
+<div class="full-background-image">
+  <div class="background-mask d-flex justify-content-center align-items-center text-center text-white">
+    <div class="container p-0">
+      <div class="home-content ">
+        <h1 class="home-content__heading main-heading">Gallery</h1>
+        <p class="home-content__desc main-content">Course of help is a registered non profit/Non governmental
+          organisation was found in 2015. It promotes empathy and compassion for all living beings and care for the
+          environment by educating young people through its humane education programs and workshops.</p>
+        <p class="home-content__desc main-content">We also Collabrate with different organisation who have similar
+          goals.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid px-0 my-5 gallery-wrapper">
+  <div class="gallery" gallerize>
+    <img *ngFor="let image of data" src="{{image.thumb}}" [attr.imageSrc]="image.src" [attr.thumbSrc]="image.thumb">
+  </div>
+</div>
